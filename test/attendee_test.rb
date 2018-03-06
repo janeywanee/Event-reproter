@@ -6,8 +6,16 @@ require 'pry'
 class AttendeeTest < MiniTest::Test
 
   def setup
-    
-    @attendee = Attendee.new("1", "11/12/08 10:47", "Allison", "Nguyen", "arannon@jumpstartlab.com", "6154385000", "3155 19th St NW", "Washington", "DC", "20010")
+    @attendee = Attendee.new({id:"1",
+                              regdate:"11/12/08 10:47",
+                              first_Name:"Allison",
+                              last_Name:"Nguyen",
+                              email:"arannon@jumpstartlab.com",
+                              home_phone:"6154385000",
+                              street:"3155 19th St NW",
+                              city:"Washington",
+                              state:"DC",
+                              zipcode:"20010"})
   end
 
   def test_it_exists
